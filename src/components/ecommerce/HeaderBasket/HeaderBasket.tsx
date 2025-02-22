@@ -1,4 +1,6 @@
+// Styles
 import style from "./style.module.css";
+// Assets
 import Logo from "@assets/svg/cart.svg?react";
 const { basketContainer, basketQuantity } = style;
 const HeaderBasket = () => {

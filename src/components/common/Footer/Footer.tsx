@@ -1,3 +1,4 @@
+// Styles
 import style from "./style.module.css";
 const { footerContainer } = style;
 const Footer = () => {
