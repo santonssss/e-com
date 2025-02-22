@@ -1,7 +1,7 @@
 import { Badge } from "react-bootstrap";
 import style from "./Style.module.css";
 import { Container, Nav, Navbar } from "react-bootstrap";
-import { HeaderBasket } from "../../ecommerce";
+import { HeaderBasket } from "@components/ecommerce";
 const { headerContainer, headerLogo } = style;
 const Header = () => {
   return (
@@ -16,7 +16,6 @@ const Header = () => {
         <Container>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
-            ,
             <Nav className="me-auto">
               <Nav.Link href="#home">Home</Nav.Link>
               <Nav.Link href="#link">Categories</Nav.Link>
