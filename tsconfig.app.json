@@ -24,6 +24,7 @@
       "@pages/*": ["src/pages/*"],
       "@store/*": ["src/store/*"],
       "@layouts/*": ["src/layouts/*"],
+      "@customTypes/*": ["src/types/*"],
       "@styles/*": ["src/styles/*"],
       "@utils/*": ["src/utils/*"],
       "@services/*": ["src/services/*"],

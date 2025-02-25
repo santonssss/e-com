@@ -1,17 +1,15 @@
 import { Button } from "react-bootstrap";
 import style from "./style.module.css";
+import { TProduct } from "@customTypes/Product";
 const { product, productImg } = style;
-const Product = () => {
+const Product = ({ price, title, img }: TProduct) => {
   return (
     <div className={product}>
       <div className={productImg}>
-        <img
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9m7a-6zABrhWpSzeYUJE4b-E9Sb22f9E21w&s"
-          alt="s"
-        />
+        <img src={img} alt={title} />
       </div>
-      <h2>title</h2>
-      <h3>10 Egp</h3>
+      <h2>{title}</h2>
+      <h3>{price} $</h3>
       <Button variant="info" style={{ color: "white" }}>
         Add to cart
       </Button>
