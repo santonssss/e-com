@@ -2,7 +2,7 @@ import { Col, Row } from "react-bootstrap";
 
 type TGridListProps<T> = {
   records: T[];
-  renderItem: (record: T) => React.JSX.Element;
+  renderItem: (record: T) => React.ReactNode;
 };
 type THasId = {
   id: number;
