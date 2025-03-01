@@ -13,24 +13,20 @@ import {
   REHYDRATE,
 } from "redux-persist";
 import persistStore from "redux-persist/es/persistStore";
-const rootPersistConfig = {
-  key: "root",
-  storage,
-  whitelist: ["cart"],
-};
+
 const cartPersistConfig = {
   key: "cart",
   storage,
   whitelist: ["items"],
 };
+
 const rootReducer = combineReducers({
   categories,
   products,
   cart: persistReducer(cartPersistConfig, cart),
 });
-const persistedReducer = persistReducer(rootPersistConfig, rootReducer);
 const store = configureStore({
-  reducer: persistedReducer,
+  reducer: rootReducer,
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({
       serializableCheck: {
