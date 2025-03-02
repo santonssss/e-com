@@ -16,7 +16,10 @@ const GridList = <T extends THasId>({
       ? records.map((item) => {
           return (
             <Col
-              xs={3}
+              xs={12}
+              sm={6}
+              md={4}
+              lg={3}
               key={item.id}
               className="d-flex justify-content-center mb-5 mt-2"
             >

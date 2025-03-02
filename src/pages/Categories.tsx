@@ -1,6 +1,7 @@
-import { GridList } from "@components/common";
+import { GridList, Heading } from "@components/common";
 import { Category } from "@components/ecommerce";
 import { Loading } from "@components/feedback";
+import { TCategory } from "@customTypes/Category";
 import { actGetCategories } from "@store/categories/categoriesSlice";
 import { useAppDispatch, useAppSelector } from "@store/hooks";
 import { useEffect } from "react";
@@ -19,10 +20,11 @@ const Categories = () => {
 
   return (
     <Container>
+      <Heading>Category</Heading>
       <Loading status={loading} error={error}>
-        <GridList
+        <GridList<TCategory>
           records={records}
-          renderItem={(item) => <Category {...item} />}
+          renderItem={(item) => <Category key={item.id} {...item} />}
         />
       </Loading>
     </Container>
